@@ -4,4 +4,17 @@
 
 @{ 
     // TODO #3 - Use the same list display from Views/Search/Index.cshtml 
+
+     @foreach (var jobList in ViewBag.jobs)
+    {
+        <table class="job-listing">
+            @foreach (KeyValuePair<string, string> job in jobList)
+            {
+                <tr>
+                    <td>@job.Key</td>
+                    <td>@job.Value</td>
+                </tr>
+            }
+        </table>
+    }
 }
